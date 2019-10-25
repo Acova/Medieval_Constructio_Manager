@@ -1,0 +1,41 @@
+building tower
+{
+    convert_to castle_tower
+    levels ballista_towers cannon_towers 
+    {
+        ballista_towers city requires factions { northern_european, middle_eastern, eastern_european, greek, southern_european, } 
+        {
+            convert_to 0
+            capability
+            {
+                tower_level 2
+            }
+            material stone
+            construction  3 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                cannon_towers
+            }
+        }
+        cannon_towers city requires factions { northern_european, middle_eastern, eastern_european, greek, southern_european, }  and event_counter gunpowder_discovered 1 
+        {
+            convert_to 1
+            capability
+            {
+                tower_level 3
+            }
+            material stone
+            construction  4 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
