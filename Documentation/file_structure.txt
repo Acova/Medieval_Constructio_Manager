@@ -1,0 +1,37 @@
+Legend:
+    - <> means a building-specific field
+    - [] means that a field is optional
+    - {} means that you must choose between two options
+    - # is a commentary about the field
+
+#For mor information, and a detailed list of stuff: http://medieval2.heavengames.com/m2tw/mod_portal/tutorials/edb_guide/index.shtml
+
+building [<prefix>_]<building_name>
+{
+    convert_to <city/castle_equivalent>
+    levels <level0_name> <level1_name> <...> <levelN_name>
+    [religion <religion_name>]
+    {
+        <levelX_name> {city/castle} requires <condition> [{and/or} <condition> <...>]
+        {
+            convert_to <X> # Indicates the building level to wich this level of the building will convert when converting the settlement
+            capabilities
+            {
+                [<capability specification> [requires <condition> [{and/or} <conditon> <..>]]] # Each "thing" the building gives
+                [<capability specification> [requires <condition> [{and/or} <conditon> <..>]]]
+                [...]
+            }
+            material {stone/wooden}
+            construction <construction_time> # The number of turns it takes to build
+            cost <construction_cost> # How much the building costs
+            settlement_min {village/town/large_town/city/large_city/huge_city} # The minimal settlement level necesary
+            upgrades
+            {
+                [<possible_upgrade>]
+            }
+        }
+    }
+    plugins # This field doesn't do anything (as long as I know), but must be here
+    {
+    }
+}
