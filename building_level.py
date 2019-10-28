@@ -11,11 +11,22 @@ class BuildingLevel:
         self.upgrades = upgrades #string with the name of the upgrades
 
     def getLevel(self):
-        s = ("\t\t" + self.name + " " + self.settlementType + " " + self.buildingConditions +
-            "\t\t" + "{" + "\n" +
+        s = ("\t\t" + self.name + " " + self.settlementType)
+
+        firstCond = True
+        for condition in self.buildingConditions:
+            if firstCond:
+                s = s + " requieres " + condition
+                firstCond = False
+            else:
+                s = s + " and " + condition
+        s = s + "\n"
+
+        s = s + ("\t\t" + "{" + "\n" +
             "\t\t\tconvert_to " + self.convert_to + "\n" +
             "\t\t\tcapability" + "\n" +
             "\t\t\t{\n")
+
         for capability in self.capabilities:
             s = (s +
                 "\t\t\t\t" + capability + "\n")

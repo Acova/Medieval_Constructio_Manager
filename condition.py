@@ -5,4 +5,4 @@ class Condition:
         self.definition = definition
 
     def getDefinition(self):
-        return self.definition + "\n"
+        return self.definition
