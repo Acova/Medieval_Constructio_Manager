@@ -10,6 +10,9 @@ class BuildingLevel:
         self.buildingCost = buildingCost
         self.upgrades = upgrades #string with the name of the upgrades
 
+    def getName(self):
+        return self.name
+
     def getLevel(self):
         s = ("\t\t" + self.name + " " + self.settlementType)
 
@@ -33,6 +36,6 @@ class BuildingLevel:
 
         s = (s + "\t\t\t}\n" +
             self.buildingCost +
-            "\t\t\tupgrades\n\t\t\t{\n\t\t\t\t" + self.upgrades + "\n\t\t\t}\n\t\t}")
+            "\t\t\tupgrades\n\t\t\t{\n\t\t\t\t" + self.upgrades + "\n\t\t\t}\n\t\t}\n")
 
         return s
