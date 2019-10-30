@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<medieval-buildings xmlns:xsi="Prueba">
+<record>
+	<name>core_building</name>
+	<convert_to>core_castle_building</convert_to>
+</record>
+</medieval-buildings>
