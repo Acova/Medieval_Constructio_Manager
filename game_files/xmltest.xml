@@ -2,6 +2,52 @@
 <medieval-buildings xmlns:xsi="Prueba">
 <record>
 	<name>core_building</name>
-	<convert_to>core_castle_building</convert_to>
+    <convert_to>core_castle_building</convert_to>
+    <level>
+        <level_name>wooden_pallisade</level_name>
+        <settlement_type>city</settlement_type>
+        <building_conditions>
+            <condition_definition>factions { northern_european, mesoamerican, middle_eastern, eastern_european, greek, southern_european, new_culture, }</condition_definition>
+        </building_conditions>
+        <convert_to_level>1</convert_to_level>
+        <building_costs>
+            <material>wooden</material>
+            <construction_time>2</construction_time>
+            <cost>600</cost>
+            <settlement_min>village</settlement_min>
+        </building_costs>
+        <upgrades>
+            <upgrade_name>wooden_wall</upgrade_name>
+        </upgrades>
+        <capabilities>
+            <capability>
+                <capability_definition>recruit_pool "NE Bombard" 1 0.4 3 0</capability_definition>
+                <capability_condition>factions { england, scotland, france, hre, denmark, spain, portugal, milan, venice, papal_states, sicily, }</capability_condition>
+            </capability>
+        </capabilities>
+    </level>
+    <level>
+        <level_name>wooden_wall</level_name>
+        <settlement_type>city</settlement_type>
+        <building_conditions>
+            <condition_definition>factions { northern_european, mesoamerican, middle_eastern, eastern_european, greek, southern_european, new_culture, }</condition_definition>
+        </building_conditions>
+        <convert_to_level>1</convert_to_level>
+        <building_costs>
+            <material>wooden</material>
+            <construction_time>2</construction_time>
+            <cost>600</cost>
+            <settlement_min>village</settlement_min>
+        </building_costs>
+        <upgrades>
+            <upgrade_name>stone_wall</upgrade_name>
+        </upgrades>
+        <capabilities>
+            <capability>
+                <capability_definition>recruit_pool "NE Bombard" 1 0.4 3 0</capability_definition>
+                <capability_condition>factions { england, scotland, france, hre, denmark, spain, portugal, milan, venice, papal_states, sicily, }</capability_condition>
+            </capability>
+        </capabilities>
+    </level>
 </record>
 </medieval-buildings>
