@@ -19,7 +19,7 @@ class Input_Output:
         religion = None
         numberOfLevels = 0
         for line in self.file:
-            l = line.rstrip()
+            l = line.strip()
             if inBuilding:
                 if inLevel:
                     pass
@@ -31,9 +31,8 @@ class Input_Output:
                         religion = l[l.find("religion")+8:]
                         print(religion)
                     elif "levels" in l:
-                        numberOfLevels = l[l.find("levels"):].find(" ")
-                        print(l[l.find("levels"):])
-                        #print(str(numberOfLevels) + " nieveles")
+                        numberOfLevels = l.split()
+                        print(len(numberOfLevels) - 1)
             else:
                 if "building" in l:
                     inBuilding = True
